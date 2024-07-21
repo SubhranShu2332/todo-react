@@ -225,6 +225,30 @@ font-size: 19px;
   .log-out{
     margin-top: 10px;
   }
+  .container2{
+    margin: 20px !important;
+    padding: 10px !important;
+  }
+  .hero .m-5{
+    margin:10px;
+    text-align: center;
+    padding-left: 0 !important;
+  }
+  .login-right-1{
+    font-size: 30px;
+  }
+  .login-input{
+    display: inline-block;
+    width: 100%;
+  }
+  .login-button{
+    width: 50%;
+    float: none;
+    
+  }
+  .container2 .hero{
+    margin-top: 20px;
+  }
   
 }
 

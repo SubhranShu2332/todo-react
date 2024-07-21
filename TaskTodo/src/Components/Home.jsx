@@ -32,8 +32,8 @@ const Home = () => {
     localStorage.setItem("status", null)
     navigate("/")
   }
-  if (username != null) {
-    console.log(username);
+  if (JSON.parse(username )!= "null" && localStorage.length!=0) {
+    console.log(username,localStorage);
     return (<>
       {['sm'].map((expand) => (
         <Navbar key={expand} expand={expand} className="bg-body-tertiary mb-3">

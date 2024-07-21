@@ -24,7 +24,7 @@ const Register = () => {
     <Responsive></Responsive>
     <div className="container2 mx-5 px-5 rounded-3">
         <div className="hero mx-6 row">
-          <div className="col-md-5 h2">
+          <div className="col-md-5 h2 d-none d-md-block">
             
           </div>
                      
