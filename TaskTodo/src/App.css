@@ -1,0 +1,229 @@
+/* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+} */
+
+.mx-6{
+  /* padding-top: 200px;
+  padding-left:300px;
+  padding-right:300px; */
+}
+.hero .h2{
+  background: url(../src/assets/loginbg4.jpg);
+  background-size: cover;
+  height: 450px;
+}
+.offcanvas.offcanvas-end {
+  top: 0;
+  right: 0 !important;
+  width: var(--bs-offcanvas-width);
+  border-left: var(--bs-offcanvas-border-width) solid var(--bs-offcanvas-border-color);
+  transform: translateX(100%);
+}
+.offcanvas, .offcanvas-lg, .offcanvas-md, .offcanvas-sm, .offcanvas-xl, .offcanvas-xxl {
+  --bs-offcanvas-zindex: 1045;
+  --bs-offcanvas-width: 260px !important;
+}
+
+*{
+  font-family:"Alegreya SC", "Open Sans", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  /* background-color:rgb(248, 237, 216) */
+}
+
+
+.hero-text{
+  margin-top: 210px;
+  font-size: 65px;
+  font-weight: 700;
+}
+
+.navi > a{
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.hero-sub-text{
+  font-size: 20px;
+  color: grey;
+}
+
+nav .btn:hover{
+  background: rgb(220, 220, 220);
+}
+
+.container2{
+  margin:80px 200px !important;
+  background-color: rgb(248, 248, 248);
+}
+
+.login-right-1{
+  font-size: 35px;
+  font-weight: 400;
+}
+.login-right-2{
+  font-size: 22px;
+  font-weight: 400;
+}
+.login-input {
+	border: none;
+	border: 1px solid grey;
+	/* padding-bottom: 10px; */
+	margin-bottom: 22px;
+  width:75%;
+  
+}
+input:focus::-webkit-input-placeholder{
+  opacity: 0;
+}
+.login-button{
+  float:right;
+  width:25%
+}
+aside{
+  float: left;
+}
+.side-btn{
+  background-color: rgb(233, 233, 233);
+}
+.side-btn:hover{
+  color: rgb(251, 91, 33) !important;
+  background-color:bisque !important;
+  font-weight: 600;
+}
+.ms-18rem{
+  margin-left: 18rem;
+  margin-top: 10px;
+  
+}
+.dash-heading{
+  font-family:"Alegreya SC" 'Times New Roman', serif
+}
+
+.todo-input{
+  margin-top: 2px;
+  background: rgb(220, 220, 220);
+  height: 50px;
+}
+.todo-submit{
+  /* background: #ff671b; */
+  /* color: rgb(255, 255, 255); */
+  font-size: 18px;
+}
+.todo-submit:hover{
+  /* background: #ff5704; */
+  /* color: white; */
+}
+
+.strikethrough {
+  position: relative;
+  display: inline-block;
+}
+
+.strikethrough::after {
+  content: '';
+  position: absolute;
+  top: 55%;
+  left: 0;
+  width: 100%;
+  height: 3px; /* Adjust this value to change the thickness */
+  background-color: black; /* Adjust the color as needed */
+  transform: translateY(-50%);
+}
+.todo-display p{
+  font-weight: 500;
+}
+.right-todo{
+  display: flex;
+  justify-content: center;
+}
+
+.right-todo button{
+margin: 20px 0px;
+}
+.right-todo .big {
+font-size: 19px;
+}
+.todo-left{
+  margin: 20px 0;
+}
+
+@media screen and (max-width: 500px){
+  .about{
+    padding-right: 15px !important;
+    border:none !important
+  }
+  
+  .hero-text {
+    margin-top: 95px;
+    font-size: 34px;
+  }
+
+  .ms-18rem{
+    margin-left: 0;
+    margin-top: 10px;
+    
+  }
+
+  .dash-heading{
+    text-align: center;
+  }
+  .todo-submit{
+    /* background: #ff671b; */
+    /* color: rgb(255, 255, 255); */
+    font-size: 17px;
+  }
+  .each-todo{
+    width:85% !important
+  }
+  .todo-left{
+    margin-left: 10px;
+    font-size: 20px;
+  }
+  .todo-input{
+    width:61% !important
+  }
+  .log-out{
+    margin-top: 10px;
+  }
+}
+
