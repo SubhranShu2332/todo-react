@@ -14,7 +14,7 @@ const TodoDisplay = (props) => {
   const [show, setShow] = useState(false);
   const [modal, setmodal] = useState("")
   const [index, setindex] = useState(0)
-  const [isChecked, setIsChecked] = useState(props.item.isCompleted);
+  const [isChecked, setIsChecked] = useState(JSON.parse(props.item.isCompleted));
 
   const handleCheckboxChange = () => {
     setIsChecked(prevChecked => !prevChecked);
