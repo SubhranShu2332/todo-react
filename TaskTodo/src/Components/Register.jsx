@@ -10,9 +10,12 @@ const Register = () => {
     const navigate = useNavigate();
 
     const handlesubmit=(e)=>{
-        e.preventDefault();
+        if(username.length!=0 && password.length!=0)
+        {
+          e.preventDefault();
         localStorage.setItem(username,password);
         navigate("/login");
+        }
     
     }
 

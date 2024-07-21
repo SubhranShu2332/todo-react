@@ -10,7 +10,7 @@ const Hero = () => {
   let username = localStorage.getItem("status")
   const handler = () => {
     console.log(username);
-    if (username != "null") {
+    if (username != null) {
       // navigate("/dashboard")
       console.log("not null")
       navigate("/dashboard")

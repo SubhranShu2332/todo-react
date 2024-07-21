@@ -26,8 +26,8 @@ function Responsive(props) {
                         >
                             <Offcanvas.Header closeButton>
                                 <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}style={{textAlign:"center"}}>
-                                <Navbar.Brand to="/" style={{ color: 'coral', fontFamily: "Tahoma", fontSize: "25px", fontWeight: "bolder" ,textAlign:'center'}}>
-                                <Link to='/'  style={{ color: '#ff5c0a', fontFamily: "Tahoma", fontSize: "25px", fontWeight: "bolder",textDecoration:'none' }}>TodoApp</Link></Navbar.Brand>
+                                <Navbar.Brand to="/" style={{ color: 'coral',  fontSize: "25px", fontWeight: "bolder" ,textAlign:'center'}}>
+                                <Link to='/'  style={{ color: '#ff5c0a', fontSize: "25px", fontWeight: "bolder",textDecoration:'none' }}>TodoApp</Link></Navbar.Brand>
                                 </Offcanvas.Title>
                             </Offcanvas.Header>
                             <Offcanvas.Body>
