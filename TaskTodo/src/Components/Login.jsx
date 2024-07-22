@@ -17,9 +17,12 @@ const Login = () => {
       navigate("/dashboard");
       localStorage.setItem("status", username)
     }
-    else navigate("/login")
+    else 
+    {
+      alert("Wrong Credentials")
+      navigate("/login")
 
-
+    }
   }
 
   return (
@@ -38,7 +41,7 @@ const Login = () => {
               <input className='login-input px-2 rounded-3 form-control' type="text" name="name" id="name" placeholder='Username' onChange={(e) => setusername(e.target.value)} value={username} /> <br />
               <input className='login-input px-2 rounded-3 form-control' type="password" name="password" id="password" placeholder='Password' value={password} onChange={(e) => setpassword(e.target.value)} />
               <br />
-              <input className=" btn btn-outline-success mt-4 rounded-pill login-button" type=" submit" onClick={handlesubmit} value="Login" />
+              <button className=" btn btn-outline-success mt-4 rounded-pill login-button" type=" submit" onClick={handlesubmit} >Login</button>
             </div>
           </div>
         </div>

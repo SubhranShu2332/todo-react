@@ -33,7 +33,7 @@ const TodoDashboard = () => {
     }
 
     useEffect(() => {
-        console.log("In Effect " + TodoList);
+        // console.log("In Effect " + TodoList);
         if (localStorage.getItem("list" + localStorage.getItem("status")) != "[]")
             console.log("No");
         localStorage.setItem("list" + localStorage.getItem("status"), JSON.stringify(TodoList))
@@ -71,20 +71,21 @@ const TodoDashboard = () => {
     const handleButtonClick = (e) => {
         if (inputRef.current) {
             inputRef.current.focus();
-            e.click();
+            // e.click();
         }
     };
 
     const toggleCompletion = (id) => {
         let updatedList = [...TodoList];
-        updatedList[id] = { ...updatedList[id], isCompleted: !updatedList[id].isCompleted };
+        updatedList[id] = { ...updatedList[id], isCompleted:(!(updatedList[id].isCompleted)) };
         setTodoList(updatedList);
         console.log(updatedList);
     };
     const incompleteTasks = TodoList.filter(item => !item.isCompleted);
+    console.log(incompleteTasks);
     // const completeTasks = TodoList.filter(item => item.isCompleted);
 
-    const SearchList = incompleteTasks.filter(item =>
+    const SearchList = TodoList.filter(item =>
         item.task.toLowerCase().includes(Search.toLowerCase())
     );
     return (
@@ -114,7 +115,7 @@ const TodoDashboard = () => {
 
 
 
-                                    <Link className='btn text-dark mx-3 rounded-0 pe-5 about' style={{ borderRight: "1px solid grey" }} to="/about">About Us</Link>
+                                    {/* <Link className='btn text-dark mx-3 rounded-0 pe-5 about' style={{ borderRight: "1px solid grey" }} to="/about">About Us</Link> */}
 
                                     <input className="form-control w-25 rounded-4 d-none d-sm-block" type="search" placeholder="Search Any Task" value={Search} onChange={(e) => {
                                         setSearch(e.target.value)
@@ -124,9 +125,8 @@ const TodoDashboard = () => {
                                     
                                     <button className='rounded-4 btn w-100 side-btn mt-2 mb-2 d-sm-block d-md-none' onClick={handleButtonClick} ><FaPlusCircle /> Add Task</button>
                                     <button className='rounded-4 btn w-100 side-btn mb-2 d-sm-block d-md-none' onClick={() => {setIncomplete(false);
-                                        onHide()
-                                    }} closeButton><FaFilter></FaFilter>  <Offcanvas.Header style={{display:'none'}}closeButton>
-        </Offcanvas.Header>All Tasks</button>
+                                        
+                                    }} ><FaFilter></FaFilter>  All Tasks</button>
                                     <button className='rounded-4 btn w-100 side-btn mb-2 d-sm-block d-md-none' onClick={() => setIncomplete(true)}> <MdIncompleteCircle></MdIncompleteCircle> Incomplete Tasks</button>
                                     {/* <button className='rounded-4 btn w-100 side-btn d-sm-block d-md-none' onClick={() => setIncomplete(true)}> <IoIosCheckmarkCircle></IoIosCheckmarkCircle> Completed Tasks</button> */}
                                     <Link className='btn btn-warning mx-4 rounded-4 log-out' style={{ background: "#ff5c0a", color: 'white' }} onClick={handler} to="/">Log Out</Link
@@ -176,10 +176,12 @@ const TodoDashboard = () => {
                                         deleteTodo={deleteTodo}
                                         updateTask={updateTask}
                                         toggleCompletion={toggleCompletion}
+                                        TodoList={TodoList}
                                     />
                                 ))
                             ) : Search.length != 0 ?
                                 SearchList.map((item, i) => (
+                                    
                                     <TodoDisplay
                                         item={item}
                                         key={i}
@@ -187,6 +189,7 @@ const TodoDashboard = () => {
                                         deleteTodo={deleteTodo}
                                         updateTask={updateTask}
                                         toggleCompletion={toggleCompletion}
+                                        TodoList={TodoList}
                                     />
                                 ))
                                 : (
@@ -198,6 +201,7 @@ const TodoDashboard = () => {
                                             deleteTodo={deleteTodo}
                                             updateTask={updateTask}
                                             toggleCompletion={toggleCompletion}
+                                            TodoList={TodoList}
                                         />
                                     ))
                                 )}

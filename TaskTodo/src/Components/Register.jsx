@@ -14,7 +14,11 @@ const Register = () => {
         {
           e.preventDefault();
         localStorage.setItem(username,password);
+        alert("User Created")
         navigate("/login");
+        }
+        else{
+          alert("Username or password can not be empty")
         }
     
     }
@@ -35,7 +39,7 @@ const Register = () => {
                     <input className='login-input  px-2 rounded-3 form-control' type="text" name="name" id="name" placeholder=' Username' onChange={(e)=>setusername(e.target.value)} value={username}/> <br />
                     <input className='login-input  px-2 rounded-3 form-control' type="password" name="password" id="password" placeholder=' Password' value={password}  onChange={(e)=>setpassword(e.target.value)} />
                     <br />
-                    <input className=" btn btn-outline-success mt-4 rounded-pill login-button"type=" submit" onClick={handlesubmit} value="Sign Up"/>
+                    <button className=" btn btn-outline-success mt-4 rounded-pill login-button" type=" submit" onClick={handlesubmit} >Register</button>
                     </div>
             </div>
         </div>

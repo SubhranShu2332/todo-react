@@ -32,7 +32,7 @@ const Home = () => {
     localStorage.setItem("status", null)
     navigate("/")
   }
-  if (JSON.parse(username )!= "null" && localStorage.length!=0) {
+  if ((username)!= "null" && localStorage.length!=0) {
     console.log(username,localStorage);
     return (<>
       {['sm'].map((expand) => (

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import classNames from 'classnames'; // Import classnames utility
@@ -14,13 +14,18 @@ const TodoDisplay = (props) => {
   const [show, setShow] = useState(false);
   const [modal, setmodal] = useState("")
   const [index, setindex] = useState(0)
-  const [isChecked, setIsChecked] = useState(JSON.parse(props.item.isCompleted));
+  const [isChecked, setIsChecked] = useState((props.item.isCompleted));
 
   const handleCheckboxChange = () => {
-    setIsChecked(prevChecked => !prevChecked);
-    props.toggleCompletion(props.index)
+    setIsChecked(!isChecked);
+    props.toggleCompletion((props.TodoList).indexOf(props.item))
+    console.log(props.TodoList,(props.TodoList).indexOf(props.item));
   };
-
+  // console.log();
+useEffect(() => {
+  setIsChecked((props.item.isCompleted));
+  console.log(isChecked,(props.item.isCompleted),props.item);
+})
 
   const handleClose = () => setShow(false);
   const handleShow = () => {
